@@ -37,7 +37,7 @@ var gf_content = [
     },
     { // block
       title: "Reddit Comment Analysis",
-      link: "https://github.com/niksko/redditCommentAnalysis",
+      link: "https://github.com/niksko/redditCommentData",
       imageURL: "",
       keywords: ["python", "jupyter", "bokeh", "pandas"]
     }
