@@ -32,7 +32,7 @@ var gf_content = [
     { // block
       title: "GoPixel",
       link: "https://github.com/niksko/gopixel",
-      imageURL: "",
+      imageURL: "./assets/lake-sorted.png",
       keywords: ["golang", "pixel sorting", "GIFT"]
     },
     { // block
