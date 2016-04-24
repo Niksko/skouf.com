@@ -69,7 +69,7 @@ var gf_styles = {
   squareMode: true,
   innerBlock: {
     fontFamily: "Montserrat",
-    color: "#f9fbfb,
+    color: "#f9fbfb",
     padding: "10px"
   },
   blockTitle: {
