@@ -14,67 +14,52 @@ Rows can have 1 - 9 blocks.
                                     */
 
 var gf_content = [
-  [ // row
+ [ // row
     { // block
-      title: "Gridfolio: a simple layout for developers >>",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "",
-      customHeight: true,
+      title: "Nik Skoufis",
       style: {
-        backgroundColor: "#f1f1f2",
-        height: "40px",
-        color: "#555",
-        fontSize: "10px",
-        letterSpacing: "0.5px"
-      }
-    },
-  ],
-  [ // row
-    { // block
-      title: "Jane Javascript",
-      style: {
-        backgroundColor: "#00aeef",
-        fontSize: "25px",
+        backgroundColor: "#6877BA",
+        fontSize: "50px",
         letterSpacing: "1px"
       }
     },
     { // block
-      title: "Project #1",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "http://facespayneuter.org/wp-content/uploads/2014/08/foundkittens.jpg",
-      keywords: ["skill", "thing", "language", "library"]
+      title: "RasPlayer",
+      link: "https://github.com/niksko/rasplayer",
+      imageURL: "",
+      keywords: ["nodejs", "raspberry pi", "omxplayer", "purecss"]
     },
     { // block
-      title: "Project #2",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "https://www.washingtonpost.com/blogs/local/files/2014/10/4-kittens1.jpg",
-      keywords: ["skill", "thing", "language", "library"]
+      title: "GoPixel",
+      link: "https://github.com/niksko/gopixel",
+      imageURL: "",
+      keywords: ["golang", "pixel sorting", "GIFT"]
     },
     { // block
-      title: "Project #3",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "https://s3.amazonaws.com/rapgenius/cats-animals-kittens-background.jpg",
-      keywords: ["skill", "thing", "language", "library"]
+      title: "Reddit Comment Analysis",
+      link: "https://github.com/niksko/redditCommentAnalysis",
+      imageURL: "",
+      keywords: ["python", "jupyter", "bokeh", "pandas"]
     }
   ],
   [  // row
     { // block
-      title: "Project #4",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "http://www.tshirtvortex.net/wp-content/uploads/Mister-Mittens-Big-Adventure.jpg",
-      keywords: ["skill", "thing", "language", "library"]
+      title: "Honours Thesis",
+      link: "https://github.com/Niksko/HonoursThesis/raw/master/Thesis.pdf",
+      imageURL: "",
+      keywords: ["DEs", "octave", "numerical methods"]
     },
     { // block
-      title: "Project #5",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "http://data.whicdn.com/images/79011117/large.jpg",
-      keywords: ["skill", "thing", "language", "library"]
+      title: "Repeated Games with Mistakes",
+      link: "https://github.com/Niksko/AdvancedProjectReport2015/raw/master/endSemReport/endSemReport.pdf",
+      imageURL: "",
+      keywords: ["game theory", "python", "evolutionary dynamics"]
     },
     { // block
-      title: "Project #6",
-      link: "https://github.com/christinecha/gridfolio",
-      imageURL: "https://s-media-cache-ak0.pinimg.com/736x/be/09/56/be09569e65ee1e58e1cdb954da4c6192.jpg",
-      keywords: ["skill", "thing", "language", "library"]
+      title: "JEDy: Julia for Evolutionary Dynamics",
+      link: "http://nbviewer.jupyter.org/github/niksko/JEDyPresentation/blob/master/Presentation.ipynb",
+      imageURL: "",
+      keywords: ["julia", "game theory", "evolutionary dynamics"]
     }
   ]
 ]
@@ -84,7 +69,7 @@ var gf_styles = {
   squareMode: true,
   innerBlock: {
     fontFamily: "Montserrat",
-    color: "#fff",
+    color: "#f9fbfb,
     padding: "10px"
   },
   blockTitle: {
