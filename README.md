@@ -1,5 +1,4 @@
 # Nik Skoufis - Portfolio
-===============
 
 My portofolio, created using Chrstine Cha's [Gridfolio](https://github.com/christinecha/gridfolio)
 
