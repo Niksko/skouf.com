@@ -67,14 +67,14 @@ var gf_content = [
     { // block
       title: "Repeated Games with Mistakes",
       link: "https://github.com/Niksko/AdvancedProjectReport2015/raw/master/endSemReport/endSemReport.pdf",
-      imageURL: "",
+      imageURL: "./assets/repeated-games.png",
       keywords: ["game theory", "python", "evolutionary dynamics"],
       style: heading
     },
     { // block
       title: "JEDy: Julia for Evolutionary Dynamics",
       link: "http://nbviewer.jupyter.org/github/niksko/JEDyPresentation/blob/master/Presentation.ipynb",
-      imageURL: "",
+      imageURL: "./assets/jedy.png",
       keywords: ["julia", "game theory", "evolutionary dynamics"],
       style: heading
     }
