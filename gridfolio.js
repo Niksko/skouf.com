@@ -37,7 +37,7 @@ var gf_content = [
     { // block
       title: "RasPlayer",
       link: "https://github.com/niksko/rasplayer",
-      imageURL: "",
+      imageURL: "./assets/rasplayer.png",
       keywords: ["nodejs", "raspberry pi", "omxplayer", "purecss"],
       style: heading
     },
