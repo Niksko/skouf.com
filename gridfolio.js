@@ -28,6 +28,7 @@ var gf_content = [
     { // block
       title: "Nik Skoufis",
       style: {
+        color: light_grey,
         backgroundColor: base_color,
         fontSize: "50px",
         letterSpacing: "1px"
