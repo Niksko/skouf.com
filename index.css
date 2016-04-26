@@ -49,13 +49,6 @@ body {
   box-sizing: border-box;
 }
 
-.gf-block--inner a {
-  margin: -60%;
-  padding: 60%;
-  position: relative;
-  z-index: 1;
-}
-
 .gf-block--inner--spacer {
   height: 100%;
   display: inline-block;
