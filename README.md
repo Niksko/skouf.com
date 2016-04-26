@@ -1,6 +1,6 @@
 # Nik Skoufis - Portfolio
 
-My portofolio, created using Chrstine Cha's [Gridfolio](https://github.com/christinecha/gridfolio)
+My portofolio, created using Christine Cha's [Gridfolio](https://github.com/christinecha/gridfolio)
 
 -------------------------------------------------------------------------------
 
