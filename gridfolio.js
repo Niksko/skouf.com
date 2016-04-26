@@ -27,6 +27,7 @@ var gf_content = [
  [ // row
     { // block
       title: "Nik Skoufis",
+      keywords: "Software developer"
       style: {
         color: light_grey,
         backgroundColor: base_color,
