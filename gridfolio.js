@@ -13,6 +13,7 @@ gf_content =  [
 Rows can have 1 - 9 blocks.
                                     */
 var base_color = "#6FC9F0"
+var accent_color = "#6AF4A2"
 var dark_grey = "#47565C"
 var light_grey = "#F9FBFB"
 
@@ -23,6 +24,12 @@ var heading = {
   fontSize: font_size
 }
 
+var socialMediaStyle = {
+  color: light_grey,
+  backgroundColor: base_color,
+  fontSize: "30px"
+}
+
 var gf_content = [
  [ // row
     { // block
@@ -30,7 +37,7 @@ var gf_content = [
       keywords: ["Software developer"],
       style: {
         color: light_grey,
-        backgroundColor: base_color,
+        backgroundColor: accent_color,
         fontSize: "50px",
         letterSpacing: "1px"
       }
@@ -79,6 +86,44 @@ var gf_content = [
       keywords: ["julia", "game theory", "evolutionary dynamics"],
       style: heading
     }
+  ],
+  [ // row
+    {
+      title: "<i class='fa fa-github' aria-hidden='true'></i>",
+      link: "https://github.com/niksko",
+      style: socialMediaStyle
+    },
+    {
+      title: "",
+      link: "",
+      style: socialMediaStyle
+    },
+    {
+      title: "<i class='fa fa-envelope-o' aria-hidden='true'></i>",
+      link: "mailto:n.skoufis@gmail.com",
+      style: socialMediaStyle
+    },
+    {
+      title: "",
+      link: "",
+      style: socialMediaStyle
+    },
+    {
+      title: "<i class='fa fa-twitter' aria-hidden='true'></i>",
+      link: "https://twitter.com/niksko",
+      style: socialMediaStyle
+    },
+    {
+      title: "",
+      link: "",
+      style: socialMediaStyle
+    },
+    {
+      title: "<i class='fa fa-instagram' aria-hidden='true'></i>",
+      link: "https://instagram.com/nskoufis",
+      style: socialMediaStyle
+    }
+ 
   ]
 ]
 
