@@ -131,7 +131,8 @@ var gf_content = [
 var gf_styles = {
   squareMode: true,
   innerBlock: {
-    fontFamily: "Montserrat",
+    fontFamily: "Open Sans",
+    "font-weight": "bold",
     padding: "10px",
     backgroundColor: light_grey
   },
