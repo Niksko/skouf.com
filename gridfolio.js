@@ -34,7 +34,7 @@ var heading = {
 var socialMediaStyle = {
   color: light_grey,
   backgroundColor: base_color,
-  fontSize: "30px"
+  fontSize: font_size
 }
 
 var gf_content = [
