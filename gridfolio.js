@@ -141,12 +141,12 @@ var gf_styles = {
   },
   keyword: {
     fontSize: "11px",
-    backgroundColor: "rgba(71,86,92,0.7)",
+    backgroundColor: "rgba(249,251,251,0.7)",
     padding: "2px 5px",
     margin: "2px"
   },
   keywords: {
-    color: light_grey,
+    color: dark_grey,
     fontSize: "10px",
     marginTop: "-50px"
   }
