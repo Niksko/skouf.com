@@ -104,8 +104,8 @@ var gf_content = [
       style: socialMediaStyle
     },
     {
-      title: "",
-      link: "",
+      title: "blog",
+      link: "http://blog.skouf.com",
       style: socialMediaStyle
     },
     {
