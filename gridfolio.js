@@ -19,6 +19,13 @@ var light_grey = "#F9FBFB"
 
 var font_size = "30px"
 
+var nameSquare = {
+  color: light_grey,
+  backgroundColor: accent_color,
+  fontSize: "50px",
+  letterSpacing: "1px"
+}
+
 var heading = {
   color: dark_grey,
   fontSize: font_size
@@ -35,12 +42,7 @@ var gf_content = [
     { // block
       title: "Nik Skoufis",
       keywords: ["Software developer"],
-      style: {
-        color: light_grey,
-        backgroundColor: accent_color,
-        fontSize: "50px",
-        letterSpacing: "1px"
-      }
+      style: nameSquare
     },
     { // block
       title: "RasPlayer",
