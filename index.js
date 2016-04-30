@@ -68,6 +68,11 @@ requirejs(["gridfolio"], function() {
         // set block title
         var blockTitle = blockTitleProto.cloneNode()
         blockTitle.innerHTML = block.title || ""
+        // If the block has the attribute nameBlock set to true, add things specific to the name block
+        // Add the gf-block--inner--nameBlock
+        if (block.nameBlock === true) {
+          blockTitle.className += " gf-block--inner--nameBlock"
+        }
         blockTitle = addStyles(blockTitle, gf_styles.blockTitle)
         var link = linkProto.cloneNode()
         if (block.link) {

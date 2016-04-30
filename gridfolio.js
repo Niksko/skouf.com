@@ -42,6 +42,7 @@ var gf_content = [
     { // block
       title: "Nik Skoufis",
       keywords: ["Software developer"],
+      nameBlock: true,
       style: nameSquare
     },
     { // block

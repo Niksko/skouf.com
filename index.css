@@ -77,6 +77,10 @@ body {
   z-index: 1;
 }
 
+.gf-block--inner--nameBlock {
+  vertical-align: baseline;
+}
+
 @media (max-width: 996px) {
   .gf-block-4 { width: 50%; }
   .gf-block-4:nth-child(3) { padding-left: 20px; }
