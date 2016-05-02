@@ -97,11 +97,6 @@ var gf_content = [
       style: socialMediaStyle
     },
     {
-      title: "",
-      link: "",
-      style: socialMediaStyle
-    },
-    {
       title: "<i class='fa fa-envelope-o' aria-hidden='true'></i>",
       link: "mailto:n.skoufis@gmail.com",
       style: socialMediaStyle
@@ -117,8 +112,8 @@ var gf_content = [
       style: socialMediaStyle
     },
     {
-      title: "",
-      link: "",
+      title: "<i class='fa fa-key' aria-hidden='true'></i>",
+      link: "https://keybase.io/niksko",
       style: socialMediaStyle
     },
     {
