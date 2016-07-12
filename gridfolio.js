@@ -98,7 +98,7 @@ var gf_content = [
     },
     {
       title: "<i class='fa fa-envelope-o' aria-hidden='true'></i>",
-      link: "mailto:n.skoufis@gmail.com",
+      link: "mailto:hello@skouf.com",
       style: socialMediaStyle
     },
     {
