@@ -29,6 +29,12 @@ blockKeywordProto.className = "gf-block--inner--keyword"
 var clickableSpanProto = document.createElement("span")
 clickableSpanProto.className = "gf-block--link-span"
 
+var backTitleProto = document.createElement("div")
+backTitleProto.className = "gf-block--flip-container--backTitle"
+
+var backTextProto = document.createElement("div")
+backTextProto.className = "gf-block--flip-container--backText"
+
 // Global functions
 function squareify() {
   var blocks = document.querySelectorAll(".gf-block.square")
@@ -95,11 +101,39 @@ requirejs(["gridfolio"], function() {
         }
         blockKeywords = addStyles(blockKeywords, gf_styles.keywords)
 
+
         // append the nested elements
         innerBlockElement.appendChild(innerBlockSpacer.cloneNode())
         innerBlockElement.appendChild(blockTitle)
         innerBlockElement.appendChild(blockKeywords)
         blockElement.appendChild(innerBlockElement)
+
+        // Check for the backTitle and backText attributes
+        if (block.backTitle || block.backText){
+          // Add the flip container class to the rowElement
+          rowElement.className += " gf-block--flip-container"
+          // Add the flipper class to the blockElement
+          blockElement.className += " gf-block--flip-container--flipper"
+          // Add the flip front class to the inner block
+          innerBlockElement.className += " gf-block--flip-container--front"
+          // Construct a new innerBlockElement object
+          var back = innerBlockProto.cloneNode()
+          // Add the flip back class to the back element
+          back.className += " gf-block--flip-container--back"
+          back = addStyles(back, gf_styles.innerBlock)
+          back = addStyles(back, block.backStyle)
+          // Add back title and back text nodes
+          var backTitle = backTitleProto.cloneNode()
+          backTitle.innerHTML = block.backTitle || ""
+          var backText = backTextProto.cloneNode()
+          backText.innerHTML = block.backText || ""
+          // Append these to the back
+          back.appendChild(backTitle)
+          back.appendChild(backText)
+          // Add the back to the blockElement
+          blockElement.appendChild(back)
+        }
+
         rowElement.appendChild(blockElement)
       })
 

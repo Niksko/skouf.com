@@ -43,6 +43,8 @@ var gf_content = [
       title: "Nik Skoufis",
       keywords: ["Software developer"],
       nameBlock: true,
+      backTitle: "Nik Skoufis",
+      backText: "A software developer from Melbourne, Australia",
       style: nameSquare
     },
     { // block

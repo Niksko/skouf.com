@@ -90,11 +90,6 @@ body {
     transform: rotateY(180deg);
 }
 
-/*.gf-block--flip-container, .gf-block--flip-container--front, .gf-block--flip-container--back {
-  width: 320px;
-  height: 480px;
-}*/
-
 /* flip speed goes here */
 .gf-block--flip-container--flipper {
   transition: 0.6s;
