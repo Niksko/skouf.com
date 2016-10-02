@@ -26,6 +26,12 @@ var nameSquare = {
   letterSpacing: "1px"
 }
 
+var backStyle = {
+  color: dark_grey,
+  backgroundColor: light_grey,
+  fontSize: '20px'
+}
+
 var heading = {
   color: dark_grey,
   fontSize: font_size
@@ -34,7 +40,7 @@ var heading = {
 var socialMediaStyle = {
   color: light_grey,
   backgroundColor: base_color,
-  fontSize: font_size
+  fontSize: '28px'
 }
 
 var gf_content = [
@@ -44,8 +50,9 @@ var gf_content = [
       keywords: ["Software developer"],
       nameBlock: true,
       backTitle: "Nik Skoufis",
-      backText: "A software developer from Melbourne, Australia",
-      style: nameSquare
+      backText: "A software developer from Melbourne, Australia. I enjoy music, food, tinkering with hardware and learning new things.",
+      style: nameSquare,
+      backStyle: backStyle
     },
     { // block
       title: "RasPlayer",
