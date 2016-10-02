@@ -8,7 +8,7 @@ body {
   padding: 20px 0;
   margin: 0 auto;
   max-width: 1200px;
-  background-color: #F9FBFB;
+  background-color: #F1F5F7;
 }
 
 .gf-row {
@@ -102,7 +102,7 @@ body {
 .gf-block--flip-container--front, .gf-block--flip-container--back {
   backface-visibility: hidden;
 
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 }
@@ -117,6 +117,12 @@ body {
 /* back, initially hidden pane */
 .gf-block--flip-container--back {
   transform: rotateY(180deg);
+  top: -100%;
+}
+
+.gf-block--flip-container--backTitle {
+  padding-top: 7%;
+  padding-bottom: 5%;
 }
 
 @media (max-width: 996px) {
