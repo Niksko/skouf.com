@@ -146,3 +146,12 @@ body {
   .gf-block-4,
   .gf-block-5 { width: 100%; padding: 10px 20px; }
 }
+
+/* adjust the size of the blog text at small widths */
+@media (max-width: 375px) {
+  #blogTile { font-size: 23px; }
+}
+
+@media (max-width: 320px) {
+  #blogTile { font-size: 17px; }
+}

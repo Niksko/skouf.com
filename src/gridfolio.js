@@ -111,7 +111,7 @@ var gf_content = [
       style: socialMediaStyle
     },
     {
-      title: "blog",
+      title: "<div id='blogTile'>blog</div>",
       link: "http://blog.skouf.com",
       style: socialMediaStyle
     },
