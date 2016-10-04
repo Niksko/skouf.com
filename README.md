@@ -2,6 +2,12 @@
 
 My portofolio, created using Christine Cha's [Gridfolio](https://github.com/christinecha/gridfolio)
 
+I have modified the original code to add a few features:
+
+* The ability to add a title card with your name that is styled differently
+* The ability to add cards that flip using a CSS animation to reveal additional information
+* Grunt based automation of building and deploying the site to a separate branch
+
 -------------------------------------------------------------------------------
 
 The MIT License
