@@ -53,3 +53,7 @@ dist/
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
+
+### My stuff ###
+# Ignore tern project file needed for completion
+.tern-project
