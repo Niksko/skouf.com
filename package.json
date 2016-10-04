@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/Niksko/skouf.com/issues"
   },
-  "homepage": "https://github.com/Niksko/skouf.com#readme"
+  "homepage": "https://github.com/Niksko/skouf.com#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "imagemin-webp": "^4.0.0"
+  }
 }
