@@ -26,7 +26,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'dist/index.html': ['src/index.html'],
-          'dist/CNAME': ['src/CNAME']
+          'dist/CNAME': ['src/CNAME'],
+          'dist/modernizr.js': ['src/modernizr.js']
         }
       }
     },
@@ -49,6 +50,20 @@ module.exports = function(grunt) {
       dist: ['dist/']
     },
 
+    cwebp: {
+      dist: {
+        options: {
+          q: 50,
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/assets',
+          src: ['**/*.png'],
+          dest: 'dist/assets'
+        }]
+      }
+    },
+
     exec: {
       publish: 'git subtree push --prefix dist origin gh-pages'
     }
@@ -60,7 +75,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-cwebp');
 
-  grunt.registerTask('build', ['clean:dist', 'uglify:dist', 'cssmin:dist', 'copy:dist', 'imagemin:dist']);
+  grunt.registerTask('build', ['clean:dist', 'uglify:dist', 'cssmin:dist', 'copy:dist', 'imagemin:dist', 'cwebp:dist']);
   grunt.registerTask('publish', ['exec:publish']);
 };

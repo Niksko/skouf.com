@@ -67,7 +67,23 @@ requirejs(["gridfolio"], function() {
 
         // create inner block
         var innerBlockElement = innerBlockProto.cloneNode()
-        innerBlockElement.style.backgroundImage = block.imageURL ? "url(" + block.imageURL + ")" : ""
+
+        // Use Modernizr to detect webp compatible browsers and serve different images depending on what is supported
+        Modernizr.on('webp', function(result) {
+          if (block.imageURL) {
+            if (result) {
+              var webpUrl = block.imageURL.replace(".png", ".webp");
+              innerBlockElement.style.backgroundImage = "url(" + webpUrl + ")"
+            }
+            else {
+              innerBlockElement.style.backgroundImage = "url(" + block.imageURL + ")"
+            }
+          }
+          else {
+            innerBlockElement.style.backgroundImage = ""
+          }
+        });
+
         innerBlockElement = addStyles(innerBlockElement, gf_styles.innerBlock)
         innerBlockElement = addStyles(innerBlockElement, block.style)
 
@@ -146,6 +162,7 @@ requirejs(["gridfolio"], function() {
   })
 
 })
+
 
 // re-calculate the dimensions on window resize
 window.addEventListener("resize", squareify)
