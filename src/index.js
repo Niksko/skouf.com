@@ -69,16 +69,30 @@ requirejs(["gridfolio"], function() {
         var innerBlockElement = innerBlockProto.cloneNode()
 
         // Use Modernizr to detect webp compatible browsers and serve different images depending on what is supported
-        Modernizr.on('webp', function(result) {
+        Modernizr.on('webp', function(webp) {
+          // If there's an imageURL at all
           if (block.imageURL) {
-            if (result) {
+            // If webp is supported serve webp versions of the images
+            if (webp.alpha) {
               var webpUrl = block.imageURL.replace(".png", ".webp");
               innerBlockElement.style.backgroundImage = "url(" + webpUrl + ")"
             }
             else {
-              innerBlockElement.style.backgroundImage = "url(" + block.imageURL + ")"
+              // otherwise see if jpegxr is supported
+              Modernizr.on('jpegxr', function(result) {
+                // If it is, serve jpegxr versions of the images
+                if (result) {
+                  var jpegxrUrl = block.imageURL.replace(".png", ".jxr");
+                  innerBlockElement.style.backgroundImage = "url(" + jpegxrUrl + ")"
+                }
+                // Otherwise just serve the normal png version
+                else {
+                  innerBlockElement.style.backgroundImage = "url(" + block.imageURL + ")"
+                }
+              })
             }
           }
+          // If there's no image then leave the background image style blank
           else {
             innerBlockElement.style.backgroundImage = ""
           }
