@@ -29,6 +29,12 @@ module.exports = function(grunt) {
           'dist/CNAME': ['src/CNAME'],
           'dist/modernizr.js': ['src/modernizr.js']
         }
+      },
+      jxrs: {
+        expand: true,
+        cwd: 'src/assets',
+        src: '*.jxr',
+        dest: 'dist/assets'
       }
     },
 
@@ -47,7 +53,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      dist: ['dist/']
+      dist: ['dist/'],
+      jxrTemp: ['src/assets/*.jxr']
     },
 
     cwebp: {
@@ -65,6 +72,7 @@ module.exports = function(grunt) {
     },
 
     exec: {
+      createJxrs: 'mogrify -format jxr -quality 50 src/assets/*.png',
       publish: 'git subtree push --prefix dist origin gh-pages'
     }
   });
@@ -77,6 +85,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-cwebp');
 
-  grunt.registerTask('build', ['clean:dist', 'uglify:dist', 'cssmin:dist', 'copy:dist', 'imagemin:dist', 'cwebp:dist']);
+  grunt.registerTask('jxrs', ['exec:createJxrs', 'copy:jxrs', 'clean:jxrTemp'])
+  grunt.registerTask('build', ['clean:dist', 'uglify:dist', 'cssmin:dist', 'copy:dist', 'imagemin:dist', 'jxrs', 'cwebp:dist']);
   grunt.registerTask('publish', ['exec:publish']);
 };
