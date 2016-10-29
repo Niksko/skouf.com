@@ -60,3 +60,5 @@ jspm_packages
 
 # Ignore dist folder
 dist/
+
+yarn.lock
