@@ -48,6 +48,9 @@ body {
   vertical-align: top;
   box-sizing: border-box;
   position: relative;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(71,86,92,0.5);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(71,86,92,0.5);
+  box-shadow: 3px 3px 10px 0px rgba(71,86,92,0.5);
 }
 
 .gf-block--inner--spacer {
