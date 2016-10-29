@@ -80,7 +80,7 @@ function flipperAnimationEndListener() {
   // Add a mouseout event listener
   flipper.addEventListener("mouseout", flipperMouseOutListener);
   // Detect hover state. If the mouse is no longer hovering, fire a mouseout event
-  var hoverStatus = document.querySelector(".gf-block--flip-container--flipper:hover")
+  var hoverStatus = flipper.querySelector(":hover")
   if (hoverStatus == null) {
     var mouseoutEvent = new Event('mouseout')
     flipper.dispatchEvent(mouseoutEvent)
