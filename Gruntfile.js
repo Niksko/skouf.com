@@ -73,7 +73,6 @@ module.exports = function(grunt) {
 
     exec: {
       createJxrs: 'mogrify -format jxr -quality 50 src/assets/*.png',
-      publish: 'git subtree push --prefix dist origin gh-pages'
     }
   });
 
@@ -87,5 +86,4 @@ module.exports = function(grunt) {
 
   grunt.registerTask('jxrs', ['exec:createJxrs', 'copy:jxrs', 'clean:jxrTemp'])
   grunt.registerTask('build', ['clean:dist', 'uglify:dist', 'cssmin:dist', 'copy:dist', 'imagemin:dist', 'jxrs', 'cwebp:dist']);
-  grunt.registerTask('publish', ['exec:publish']);
 };
