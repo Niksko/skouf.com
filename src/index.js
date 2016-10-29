@@ -1,6 +1,19 @@
+// Utility method to remove classes
+HTMLElement.prototype.removeClass = function(remove) {
+    var newClassName = "";
+    var i;
+    var classes = this.className.split(" ");
+    for(i = 0; i < classes.length; i++) {
+        if(classes[i] !== remove) {
+            newClassName += classes[i] + " ";
+        }
+    }
+    // Need to trim to remove extra space
+    this.className = newClassName.trim();
+}
+
 // DOM Element selectors
 var gridfolioContainer = document.getElementById("gridfolio")
-
 
 // Prototype Elements
 var linkProto = document.createElement("a")
@@ -50,6 +63,49 @@ function addStyles(node, style) {
     node.style[i] = style[i]
   }
   return node
+}
+
+function flipperMouseoverListener() {
+  console.log("mouseover")
+  var flipper = document.querySelector(".gf-block--flip-container--flipper")
+  // Remove the event listener so that we don't trigger again until we're ready
+  flipper.removeEventListener("mouseover", flipperMouseoverListener)
+  // Add the class that will make it animate
+  flipper.className += " gf-block--flip-container--flipper-active"
+  // Add an event listener for animation ending
+  flipper.addEventListener("transitionend", flipperAnimationEndListener)
+}
+
+function flipperAnimationEndListener() {
+  console.log('animationend')
+  var flipper = document.querySelector(".gf-block--flip-container--flipper")
+  // Add a mouseout event listener
+  flipper.addEventListener("mouseout", flipperMouseOutListener);
+  // Detect hover state. If the mouse is no longer hovering, fire a mouseout event
+  var hoverStatus = document.querySelector(".gf-block--flip-container--flipper:hover")
+  if (hoverStatus == null) {
+    var mouseoutEvent = new Event('mouseout')
+    flipper.dispatchEvent(mouseoutEvent)
+  }
+  // Remove the animationEndListener
+  flipper.removeEventListener("transitionend", flipperAnimationEndListener)
+}
+
+function flipperMouseOutListener() {
+  console.log('mouseout')
+  var flipper = document.querySelector(".gf-block--flip-container--flipper")
+  flipper.removeEventListener("mouseout", flipperMouseOutListener);
+  // Remove the class active
+  flipper.removeClass("gf-block--flip-container--flipper-active")
+  // Add a listener for when the animation ends
+  flipper.addEventListener("transitionend", flipperAddMouseoverListener)
+}
+
+function flipperAddMouseoverListener() {
+  console.log('animation end 2')
+  var flipper = document.querySelector(".gf-block--flip-container--flipper")
+  flipper.removeEventListener("transitionend", flipperAddMouseoverListener)
+  flipper.addEventListener("mouseover", flipperMouseoverListener)
 }
 
 // Run through Gridfolio content array.
@@ -144,6 +200,8 @@ requirejs(["gridfolio"], function() {
           rowElement.className += " gf-block--flip-container"
           // Add the flipper class to the blockElement
           blockElement.className += " gf-block--flip-container--flipper"
+          // Add a listener to the blockElement
+          blockElement.addEventListener("mouseover", flipperMouseoverListener)
           // Add the flip front class to the inner block
           innerBlockElement.className += " gf-block--flip-container--front"
           // Construct a new innerBlockElement object
