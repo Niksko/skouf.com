@@ -66,7 +66,6 @@ function addStyles(node, style) {
 }
 
 function flipperMouseoverListener() {
-  console.log("mouseover")
   var flipper = document.querySelector(".gf-block--flip-container--flipper")
   // Remove the event listener so that we don't trigger again until we're ready
   flipper.removeEventListener("mouseover", flipperMouseoverListener)
@@ -77,7 +76,6 @@ function flipperMouseoverListener() {
 }
 
 function flipperAnimationEndListener() {
-  console.log('animationend')
   var flipper = document.querySelector(".gf-block--flip-container--flipper")
   // Add a mouseout event listener
   flipper.addEventListener("mouseout", flipperMouseOutListener);
@@ -92,7 +90,6 @@ function flipperAnimationEndListener() {
 }
 
 function flipperMouseOutListener() {
-  console.log('mouseout')
   var flipper = document.querySelector(".gf-block--flip-container--flipper")
   flipper.removeEventListener("mouseout", flipperMouseOutListener);
   // Remove the class active
@@ -102,7 +99,6 @@ function flipperMouseOutListener() {
 }
 
 function flipperAddMouseoverListener() {
-  console.log('animation end 2')
   var flipper = document.querySelector(".gf-block--flip-container--flipper")
   flipper.removeEventListener("transitionend", flipperAddMouseoverListener)
   flipper.addEventListener("mouseover", flipperMouseoverListener)
