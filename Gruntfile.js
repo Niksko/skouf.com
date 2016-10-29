@@ -53,7 +53,7 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      dist: ['dist/'],
+      dist: ['dist/**/*', '!dist/.git/'],
       jxrTemp: ['src/assets/*.jxr']
     },
 
