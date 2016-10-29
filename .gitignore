@@ -57,3 +57,6 @@ jspm_packages
 ### My stuff ###
 # Ignore tern project file needed for completion
 .tern-project
+
+# Ignore dist folder
+dist/
